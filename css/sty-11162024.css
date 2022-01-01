@@ -1,0 +1,147 @@
+/* page */
+
+body {
+	font-family: Open Sans;
+}
+
+#container {
+  height: auto;
+  margin: auto;
+  max-width: 920px;
+}
+
+#left {
+	font-size: 95%;
+  min-height: 360px;
+  padding-top: 8px;
+  position: absolute;
+  text-align: center;
+  width: 250px;
+}
+
+#right {
+  margin-left: 275px;
+  margin-right: auto;
+  margin-top: 2ex;
+	max-width: 645px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+}
+
+#flatbar {
+	display: none;
+}
+
+@media (max-width: 920px) {
+	#container {
+		max-width: 645px;
+	}
+	#left {
+		display: none;
+	}
+	#right {
+		margin-left: auto !important;
+	}
+	#flatbar {
+		display: block;
+		margin-top: 22px;
+		margin-bottom: 22px;
+
+	}
+}
+
+/* links */
+
+.soft, .soft:visited * {
+  color: #888888 !important;
+  text-decoration-color: #888888;
+  text-decoration-style: dotted;
+  -webkit-text-decoration-color: #888888;
+  -webkit-text-decoration-style: dotted;
+}
+
+/* bib entry */
+
+a, a:visited {
+	color: blue;
+}
+
+#first_h2 {
+	margin-top: 33px;
+}
+
+#bibtex_display_conf, #bibtex_display_work, #bibtex_display_jour, #bibtex_display_thes {
+	margin-bottom: -0.5em;
+}
+
+.link, .abst_link, .bibt_link, .plnk_link, .flnk_link {
+	cursor: pointer;
+	font-size: 95%;
+	text-decoration: underline;
+}
+
+.title {
+	background-color: #EEFFEE;
+}
+
+/* bib list */
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+ol {
+	padding-inline-start: 33px;
+}
+
+ol.conf {
+	counter-reset: list 31;
+}
+
+ol.work {
+	counter-reset: list 11;
+}
+
+ol.jour {
+	counter-reset: list 8;
+}
+
+ol.thes {
+	counter-reset: list 3;
+}
+
+ol.seo {
+	max-height: 0px !important;
+	overflow: hidden !important;
+}
+
+ol * li {
+	list-style: none;
+	position: relative;
+}
+
+ol.conf * li:before, ol.work * li:before, ol.jour * li:before, ol.thes * li:before {
+	content: "[" counter(list) "]";
+	counter-increment: list -1;
+	left: -33px;
+	position: absolute;
+	text-align: left;
+}
+
+ul {
+	padding-inline-start: 22px;
+}
+
+ul > li {
+	padding-bottom: 9px;
+  padding-left: 2px;
+}
+
+/* top note */
+
+hr {
+	border-top-width: 0.5px;
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
