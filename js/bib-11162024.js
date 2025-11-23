@@ -399,6 +399,11 @@ if (typeof jQuery == 'undefined') {
   alert("Please include jquery in all pages using bibtex_js!");
 } else {
   $(document).ready(function () {
+    fetch('bib/proj-11022023.bib')
+      .then(response => response.text())
+      .then((data) => {
+        bibtex_js_draw(data, "#bibtex_display_proj");
+      });
     fetch('bib/conf-11022023.bib')
       .then(response => response.text())
       .then((data) => {

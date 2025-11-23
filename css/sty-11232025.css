@@ -71,7 +71,7 @@ a, a:visited {
 	margin-top: 33px;
 }
 
-#bibtex_display_conf, #bibtex_display_work, #bibtex_display_jour, #bibtex_display_thes {
+#bibtex_display_proj, #bibtex_display_conf, #bibtex_display_work, #bibtex_display_jour, #bibtex_display_thes {
 	margin-bottom: -0.5em;
 }
 
@@ -95,6 +95,10 @@ ol {
 	padding-inline-start: 33px;
 }
 
+ol.proj {
+	counter-reset: list 34;
+}
+
 ol.conf {
 	counter-reset: list 31;
 }
@@ -112,8 +116,10 @@ ol.thes {
 }
 
 ol.seo {
+  /* comment out max-height to (pre)view hardcoded entries */
 	max-height: 0px !important;
 	overflow: hidden !important;
+  margin: 0px !important;
 }
 
 ol * li {
@@ -121,7 +127,7 @@ ol * li {
 	position: relative;
 }
 
-ol.conf * li:before, ol.work * li:before, ol.jour * li:before, ol.thes * li:before {
+ol.proj * li:before, ol.conf * li:before, ol.work * li:before, ol.jour * li:before, ol.thes * li:before {
 	content: "[" counter(list) "]";
 	counter-increment: list -1;
 	left: -33px;
